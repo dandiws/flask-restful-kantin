@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="modal fade" id="warungDetail">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <section class="infotoko">
+          <h2 class="judul text-center" id="nama-warung">Warung Bang Joni</h2>
+          <hr>
+          <br><br><br>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12 right">
+                <img src="/static/kantin1.jpeg" alt="gambartoko" class="imgtoko">
+
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="inf">
+                      <ul>
+                        <li>Rating</li>
+                        <li>Nama Pedagang</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="inf">
+                      <ul>
+                        <li>: &#x2605; <span id="rating-warung"></span></li>
+                        <li>: <span id="pedagang-warung"></span></li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="menu">
+          <h2 class="judul text-center">Menu</h2>
+          <hr><br>
+          <br>
+          <br>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <h4>Makanan</h4>
+                <div class="clearfix mb-5"></div>
+                <ul class="list-unstyled" id="menu-makanan">
+
+                </ul>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <h4>Minuman</h4>
+                <div class="clearfix mb-5"></div>
+                <ul class="list-unstyled" id="menu-minuman">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<header>
+      <div class="container">
+        <div class="headline">
+          <H1>
+            berprestasi dengan <br>makan makanan bergizi
+          </H1>
+        </div>
+      </div>
+</header>
+<section class="Tentang">
+<div class="container">
+  <h2 class="judul text-center">Tentang</h2>
+  <hr>
+  <div class="tentang-conten text-center">
+    Kantin mipa adalah kantin yang berada di MIPA. kantin ini terkenal dengan harganya yang miring tp tetap menawarkan hidangan yang mewah. Karena begitu terkenalnya membuat banyak mahasiswa dari fakultas lain untuk menjajankan uang di kantin MIPA ini.
+  </div>
+</div>
+</section>
+<br>
+<br>
+<br>
+<section class="Produk">
+<div class="container">
+  <h2 class="judul text-center">Warung</h2>
+  <hr>
+  <br><br>
+  <div class="row" id="warung-list">
+  </div>
+</div>
+</section>
+<br>
+<br>
+<br>
+<script src="{{ url_for('static', filename='js/main.js') }}" charset="utf-8"></script>
+{% endblock %}
